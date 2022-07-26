@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.example.myfirstcameraapp.AutoTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+    <com.example.myfirstcameraapp.MySurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <RelativeLayout
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/texture"
+        android:background="@color/teal_200">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight ="240px"
+            android:maxWidth="240px"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:id="@+id/phonePicture"
+            android:layout_alignTop="@+id/picture"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/ic_launcher_background"/>
+
+        <Button
+            android:id="@+id/picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+
+            android:text="Picture" />
+
+        <Button
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/picture"
+            android:layout_alignBottom="@+id/picture"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:text="video" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/photoAlbum"
+            android:layout_below="@+id/picture"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="open"/>
+
+    </RelativeLayout>
+</RelativeLayout>
